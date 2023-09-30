@@ -7,6 +7,7 @@ const fs = require('fs')
 describe("Testing Claims", ()=> {
     test('Click Claims', async () => {
         await page.navigate();
+        await page.driver.manage().window().fullscreen(); 
         await page.getElement(page.Claims);
         await page.click(page.Claims);
         let ClaimsUrl = await page.driver.getCurrentUrl();

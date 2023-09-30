@@ -2,12 +2,14 @@ import {Driver} from 'selenium-webdriver/chrome';
 import {BasePage} from './BasePage';
 import {Asurion} from './NavDropDownPageObject';
 import { By } from 'selenium-webdriver/lib/by';
+import { before, beforeEach } from 'node:test';
 const page = new Asurion(); 
 const fs = require('fs');
 
 describe("Testing Repair Services", ()=> {
     test('Click Repair Services', async () => {
         await page.navigate();
+        await page.driver.manage().window().fullscreen(); 
         await page.getElement(page.RepServices);
         await page.click(page.RepServices);
         const cookieelement = await page.driver.findElement(page.CookieAccept);

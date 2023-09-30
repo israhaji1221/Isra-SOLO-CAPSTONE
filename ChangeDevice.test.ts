@@ -8,6 +8,7 @@ const fs = require('fs');
 describe("Testing to change the original repair services", ()=> {
     test('Click iPhone and confirm destination', async () => {
         await page.navigate();
+        await page.driver.manage().window().fullscreen(); 
         const cookieelement = await page.driver.findElement(page.CookieAccept);
         if (cookieelement) {
             await cookieelement.click();
