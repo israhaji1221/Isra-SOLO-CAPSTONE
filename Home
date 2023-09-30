@@ -1,0 +1,79 @@
+ test('Click AT&T Home Tech Protection Button', async () => {
+        await page.getElement(page.ATTHomeTechProtection);
+        await page.click(page.ATTHomeTechProtection);
+        let ATTHomeTechProtectionUrl = await page.driver.getCurrentUrl();
+        expect (ATTHomeTechProtectionUrl).toBe("https://www.asurion.com/verizon/home-device-protect/");    
+        });
+
+
+    // test('Click log in and confirm destination', async () => {
+    //     const originalWindow = await page.driver.getWindowHandle();
+    //     await page.getElement(page.LogInButton);
+    //     await page.click(page.LogInButton);
+    //     await page.driver.wait(async () => (await page.driver.getAllWindowHandles()).length === 2, 10000);
+    //     const windows = await page.driver.getAllWindowHandles(); 
+
+    //     windows.forEach(async handle => {
+    //     if (handle !== originalWindow) {
+    //     await page.driver.switchTo().window(handle);
+    //     let LogInButtonUrl = await page.driver.getCurrentUrl();
+    //     expect (LogInButtonUrl).toContain("https://id.asurion.com/login");
+    //     };
+    //     });
+    //     });
+    
+    // test('Input Email', async () => {
+    //     const element = await page.driver.findElement(page.EmailInput);
+    //     await element.sendKeys("fake@fake.com");
+    //     let EmailInputUrl = await page.driver.getCurrentUrl();
+    //     expect (EmailInputUrl).toBe("https://id.asurion.com/login");    
+    //     });
+
+    // test('Input Email', async () => {
+    //     await page.getElement(page.ContinueButton);
+    //     await page.click(page.ContinueButton);
+    //     let ContinueButtonUrl = await page.driver.getCurrentUrl();
+    //     expect (ContinueButtonUrl).toBe("https://id.asurion.com/verify-otp");    
+    //     });
+
+    // test('Input 0 in the first code box', async () => {
+    //     await page.getElement(page.CodeButton0);
+    //     await page.click(page.CodeButton0);
+    //     let CodeButton0Url = await page.driver.getCurrentUrl();
+    //     expect (CodeButton0Url).toBe("https://id.asurion.com/verify-otp");    
+    //     });
+
+    // test('Input 1 in the first code box', async () => {
+    //     await page.getElement(page.CodeButton1);
+    //     await page.click(page.CodeButton1);
+    //     let CodeButton1Url = await page.driver.getCurrentUrl();
+    //     expect (CodeButton1Url).toBe("https://id.asurion.com/verify-otp");    
+    //     });
+
+    // test('Input 2 in the first code box', async () => {
+    //     await page.getElement(page.CodeButton2);
+    //     await page.click(page.CodeButton2);
+    //     let CodeButton2Url = await page.driver.getCurrentUrl();
+    //     expect (CodeButton2Url).toBe("2");    
+    //     });
+
+    // test('Input 3 in the first code box', async () => {
+    //     await page.getElement(page.CodeButton3);
+    //     await page.click(page.CodeButton3);
+    //     let CodeButton3Url = await page.driver.getCurrentUrl();
+    //     expect (CodeButton3Url).toBe("https://id.asurion.com/verify-otp");    
+    //     });
+
+    // test('Input 4 in the first code box', async () => {
+    //     await page.getElement(page.CodeButton4);
+    //     await page.click(page.CodeButton4);
+    //     let CodeButton4Url = await page.driver.getCurrentUrl();
+    //     expect (CodeButton4Url).toBe("https://id.asurion.com/verify-otp");    
+    //     });  
+
+    // test('Input 5 in the first code box', async () => {
+    //     await page.getElement(page.CodeButton5);
+    //     await page.click(page.CodeButton5);
+    //     let CodeButton5Url = await page.driver.getCurrentUrl();
+    //     expect (CodeButton5Url).toBe("https://id.asurion.com/verify-otp");    
+    //     });
